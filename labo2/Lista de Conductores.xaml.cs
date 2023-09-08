@@ -29,7 +29,6 @@ namespace labo2
         public ListaConductores()
         {
             InitializeComponent();
-
             // Crear una lista de conductores (esto es solo un ejemplo)
             List<Conductor> conductores = new List<Conductor>
             {

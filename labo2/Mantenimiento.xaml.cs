@@ -25,9 +25,9 @@ namespace labo2
         }
         private void RegistrarMantenimiento_Click(object sender, RoutedEventArgs e)
         {
-            string nombreConductor = txtPesoMaximo.Text;
-            string licencia = txtPlaca.Text;
-            string transporte = txtPesoVacio.Text;
+            string presomaximo = txtPesoMaximo.Text;
+            string placa = txtPlaca.Text;
+            string pesovacio = txtPesoVacio.Text;
 
             // Aquí puedes realizar la lógica para guardar la información o realizar la acción deseada
             // Por ejemplo, guardar los datos en una base de datos
