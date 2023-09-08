@@ -1,0 +1,27 @@
+﻿<Window x:Class="labo2.Mantenimiento"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:labo2"
+        mc:Ignorable="d"
+        Title="Mantenimiento" Height="450" Width="800">
+
+    <Grid>
+        <StackPanel Margin="20">
+            <Label Content="Peso máximo:" Foreground="#007ACC" FontSize="16" FontWeight="Bold" Margin="0,0,0,5" />
+            <TextBox x:Name="txtPesoMaximo" BorderBrush="#007ACC" BorderThickness="1" Padding="5" />
+
+            <Label Content="Placa:" Foreground="#E91E63" FontSize="16" FontWeight="Bold" Margin="0,10,0,5" />
+            <TextBox x:Name="txtPlaca" BorderBrush="#E91E63" BorderThickness="1" Padding="5" />
+
+            <Label Content="Peso Vacío:" Foreground="#009688" FontSize="16" FontWeight="Bold" Margin="0,10,0,5" />
+            <TextBox x:Name="txtPesoVacio" BorderBrush="#009688" BorderThickness="1" Padding="5" />
+
+            <Button Content="Registrar Mantenimiento" Click="RegistrarMantenimiento_Click"
+                Background="#007ACC" Foreground="White" FontSize="16" FontWeight="Bold" Margin="0,20,0,0" />
+        </StackPanel>
+    </Grid>
+
+</Window>
+    

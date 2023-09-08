@@ -24,5 +24,25 @@ namespace labo2
         {
             InitializeComponent();
         }
+        private void BtnIniciarSesion_Click(object sender, RoutedEventArgs e)
+        {
+            string usuario = txtUsuario.Text;
+            string contraseña = txtContraseña.Password;
+
+            // Verificar las credenciales (esto es solo un ejemplo)
+            if (usuario == "Will" && contraseña == "Bocchi")
+            {
+                // Credenciales correctas, redirige a la ventana del menú
+                Menu menuWindow = new Menu();
+                menuWindow.Show();
+                Close(); // Cierra la ventana de inicio de sesión
+            }
+            else
+            {
+                lblMensaje.Text = "Credenciales incorrectas. Intente nuevamente.";
+                txtUsuario.Clear();
+                txtContraseña.Clear();
+            }
+        }
     }
 }

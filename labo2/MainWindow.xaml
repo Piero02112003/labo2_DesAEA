@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <StackPanel Margin="20">
+            <Label Content="Usuario:" />
+            <TextBox x:Name="txtUsuario" />
+            <Label Content="Contraseña:" />
+            <PasswordBox x:Name="txtContraseña" />
+            <Button Content="Iniciar Sesión" Click="BtnIniciarSesion_Click" />
+            <TextBlock x:Name="lblMensaje" Foreground="Red" Margin="0,10,0,0" />
+        </StackPanel>
     </Grid>
 </Window>

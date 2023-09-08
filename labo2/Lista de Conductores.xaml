@@ -1,0 +1,53 @@
+﻿<Window x:Class="labo2.Lista_de_Conductores"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:labo2"
+        mc:Ignorable="d"
+        Title="Lista de Conductores" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="dgConductores" 
+              AutoGenerateColumns="False" 
+              RowBackground="#F5F5F5" 
+              BorderBrush="Transparent" 
+              RowHeaderWidth="0" 
+              SelectionUnit="FullRow"
+              SelectionMode="Single" 
+              CanUserAddRows="False"
+              CanUserDeleteRows="False" 
+              IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Peso Máximo" Binding="{Binding PesoMax}" Width="*" 
+                                Foreground="#E91E63" 
+                                FontSize="16" 
+                                FontWeight="Bold"/>
+                <DataGridTextColumn Header="Placa" Binding="{Binding Placa}" Width="*" 
+                                Foreground="#009688" 
+                                FontSize="16" 
+                                FontWeight="Bold"/>
+                <DataGridTextColumn Header="Peso Vacio" Binding="{Binding PesoVacio}" Width="*" 
+                                Foreground="#FF5722" 
+                                FontSize="16" 
+                                FontWeight="Bold"/>
+            </DataGrid.Columns>
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Setter Property="Background" Value="{Binding RowColor}"/>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell">
+                    <Setter Property="Background" Value="White"/>
+                    <Setter Property="BorderThickness" Value="0"/>
+                    <Setter Property="Padding" Value="10"/>
+                </Style>
+            </DataGrid.CellStyle>
+            <DataGrid.RowHeaderStyle>
+                <Style TargetType="DataGridRowHeader">
+                    <Setter Property="Visibility" Value="Hidden"/>
+                </Style>
+            </DataGrid.RowHeaderStyle>
+        </DataGrid>
+    </Grid>
+</Window>

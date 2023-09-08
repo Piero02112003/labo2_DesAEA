@@ -1,0 +1,72 @@
+﻿<Window x:Class="labo2.Operaciones"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:labo2"
+        mc:Ignorable="d"
+        Title="Operaciones" Height="646" Width="800">
+    <Grid>
+        <StackPanel Margin="20">
+            <!-- Estilo para las etiquetas -->
+            <StackPanel.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="Margin" Value="0,10" />
+                    <Setter Property="FontSize" Value="14" />
+                    <Setter Property="FontWeight" Value="Bold" />
+                </Style>
+            </StackPanel.Resources>
+
+            <Label Content="Tipo de Documento:" />
+            <ComboBox x:Name="cmbTipoDocumento">
+                <ComboBoxItem Content="Documento 1" />
+                <ComboBoxItem Content="Documento 2" />
+                <ComboBoxItem Content="Documento 3" />
+            </ComboBox>
+
+            <Label Content="Número de Documento:" />
+            <TextBox x:Name="txtNumeroDocumento" />
+
+            <Label Content="Placa:" />
+            <TextBox x:Name="txtPlaca" />
+
+            <Label Content="Turno:" />
+            <ComboBox x:Name="cmbTurno">
+                <ComboBoxItem Content="Turno 1" />
+                <ComboBoxItem Content="Turno 2" />
+                <ComboBoxItem Content="Turno 3" />
+            </ComboBox>
+
+            <Label Content="Nombre del Conductor:" />
+            <TextBox x:Name="txtNombreConductor" />
+
+            <Label Content="Nombre del Cliente:" />
+            <TextBox x:Name="txtNombreCliente" />
+
+            <Label Content="Fecha y Hora:" />
+            <StackPanel Orientation="Horizontal">
+                <DatePicker x:Name="dpFecha" />
+                <TextBox x:Name="txtHora" Width="80" />
+            </StackPanel>
+
+            <Label Content="Peso de Ingreso:" />
+            <TextBox x:Name="txtPesoIngreso" />
+
+            <!-- Estilo para el botón -->
+            <Button Content="Registrar Ingreso" Click="RegistrarIngreso_Click">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#007ACC" />
+                        <Setter Property="Foreground" Value="White" />
+                        <Setter Property="Padding" Value="10,5" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#005CA3" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,22 @@
+﻿<Window x:Class="labo2.Listado_de_Salidas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:labo2"
+        mc:Ignorable="d"
+        Title="Listado_de_Salidas" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="dgSalida" AutoGenerateColumns="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha}" />
+                <DataGridTextColumn Header="Peso" Binding="{Binding Peso}" />
+                <DataGridTextColumn Header="Tipo Auto" Binding="{Binding TipoAuto}" />
+                <DataGridTextColumn Header="Nombre Transportista" Binding="{Binding NombreTransportista}" />
+                <DataGridTextColumn Header="Peso Ingreso" Binding="{Binding PesoIngreso}" />
+                <DataGridTextColumn Header="Peso Salida" Binding="{Binding PesoSalida}" />
+                <DataGridTextColumn Header="FechayHora" Binding="{Binding FechayHora}" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
